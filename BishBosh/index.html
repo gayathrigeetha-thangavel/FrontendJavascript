@@ -1,0 +1,64 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fronend Javascript Web Page</title>  
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">    
+            function msg(){    
+             alert("Welcome to Frontend design");    
+            }  
+         /**   var n = 50
+            var x = 3
+            var y = 4
+            
+            for(var i = 1; i<= n ; i++)
+            {
+                if (i % x == 0 && i % y == 0) console.log(i+" BishBosh");
+
+                else if (i % x == 0) console.log( i+" Bish");
+
+                else if (i % y == 0) console.log(i+" Bosh");
+
+                else console.log(i+" Not divisible by given number");
+            } **/
+            
+           
+        </script> 
+    </head>  
+    <body> 
+        <header class="header">
+            <h1 style="background-color: rgb(130, 95, 219); color: white;">Bish Bosh 2.0</h1> 
+        </header>
+        <br><br> <br><br>  
+        <form>  
+            <label id="label1">Loop number:</label>
+            <input type="text" id="loopnumber"/>
+            <br>
+            <label id="label2">Bish number:</label>
+            <input type="text" id="bishnumber"/>
+            <br>
+            <label id="label3">Bosh number:</label>
+            <input type="text" id="boshnumber"/>
+            <br>
+            <br>
+            <!--<input type="button" value="click here to see" onclick="msg()"/>  -->  
+            <button id="button1">Click here to see the result</button>
+            <button id="button2">Clear Result</button>
+             <br><br>
+            <div class="resultDiv">
+                <p>Results are:</p>
+                <span id="result"></span>
+            </div>   
+        </form> 
+        <script src="bishbosh.js"></script>
+    </body>  
+    <footer>
+        <footer class="footer bg-secondary">
+            <div class="text-center p-3" style="background-color: rgb(130, 95, 219);">
+                Gayathrigeetha - Copyright  ©  Bish-Bosh
+            </div>
+        </footer>
+    </footer>
+</html>  

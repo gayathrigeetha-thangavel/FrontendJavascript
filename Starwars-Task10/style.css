@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    width: 100vw;
+    height: 40px;
+}
+
+.textbox{
+    width : 20vw;
+    height: 30px;
+}
+
+.button{
+    width : 50px;
+    height: 30px;
+    margin-top: 1vw;
+}
+
+.textarea{
+    width : 30vw;
+    margin-top: 1vw;
+    height : auto;
+}

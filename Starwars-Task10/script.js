@@ -6,7 +6,7 @@ const getApi = () => {
 
     const textName = document.getElementById("textName").value;
 
-    // url for the characters
+    // Base url to get the characters
     let url = new URL("https://www.swapi.tech/api/people/");
     let params = new URLSearchParams(url.search);
     
@@ -34,17 +34,21 @@ const getApi = () => {
         console.log(data);
         textResult.innerHTML = ''
 
-        data.result.forEach(characterData =>{
-            textResult.innerHTML +=
-            `
-            Name: ${characterData.properties.name}
-            Height: ${characterData.properties.height}
-            Mass: ${characterData.properties.mass}
-            Gender: ${characterData.properties.gender}
-            Hair Color: ${characterData.properties.hair_color}
+        if (data.result && data.result.length > 0) {
+            data.result.forEach(characterData =>{
+                textResult.innerHTML +=
+                `
+                Name: ${characterData.properties.name}
+                Height: ${characterData.properties.height}
+                Mass: ${characterData.properties.mass}
+                Gender: ${characterData.properties.gender}
+                Hair Color: ${characterData.properties.hair_color}
 
-            `
-        })
+                `
+            });
+        } else {
+            textResult.innerHTML = 'No characters found with that name.';
+        }
     }) .catch(err => console.log(err))
 }
 
